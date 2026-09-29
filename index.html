@@ -2,11 +2,82 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Em breve</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bira.Net - Em breve</title>
+    <!-- Importando uma fonte moderna do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f172a; /* Fundo azul escuro */
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 50px 30px;
+            border-radius: 20px;
+            background: rgba(30, 41, 59, 0.8); /* Efeito de vidro */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8; /* Azul claro */
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            background: linear-gradient(to right, #38bdf8, #818cf8); /* Efeito degradê */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: #94a3b8; /* Cinza claro */
+            line-height: 1.6;
+        }
+
+        /* Ajustes para celular */
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2rem; }
+            p { font-size: 1rem; }
+            .container { padding: 30px 20px; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Este domínio está reservado</h1>
-    <p>biranet</p>
-    <p>Em breve, novidades por aqui.</p>
+    <div class="container">
+        <div class="badge">Em construção</div>
+        <h1>Bira.Net</h1>
+        <p>Este domínio já foi reservado.<br>Em breve, novidades por aqui.</p>
+    </div>
 </body>
 </html>
