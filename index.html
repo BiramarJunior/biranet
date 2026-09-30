@@ -1,83 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bira.Net - Em breve</title>
-    <!-- Importando uma fonte moderna do Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #0f172a; /* Fundo azul escuro */
-            color: #f8fafc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 600px;
-            padding: 50px 30px;
-            border-radius: 20px;
-            background: rgba(30, 41, 59, 0.8); /* Efeito de vidro */
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 8px 16px;
-            border-radius: 999px;
-            background: rgba(56, 189, 248, 0.1);
-            color: #38bdf8; /* Azul claro */
-            font-size: 0.875rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 16px;
-            background: linear-gradient(to right, #38bdf8, #818cf8); /* Efeito degradê */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p {
-            font-size: 1.125rem;
-            color: #94a3b8; /* Cinza claro */
-            line-height: 1.6;
-        }
-
-        /* Ajustes para celular */
-        @media (max-width: 480px) {
-            h1 { font-size: 2.2rem; }
-            p { font-size: 1rem; }
-            .container { padding: 30px 20px; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="O próximo capítulo vai surpreender você. Uma nova forma de transformar perguntas em possibilidades. Biranet. Em breve.">
+  <title>Biranet — O próximo capítulo</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f172a'/%3E%3Cpath d='M20 13v36h14c10 0 17-7 17-17S44 16 34 16c-3 0-5 1-7 2v-5zm7 21c0-5 3-8 7-8s7 3 7 8-3 8-7 8-7-3-7-8' fill='%2338bdf8'/%3E%3C/svg%3E">
+  <style>
+    @font-face{font-family:Inter;src:url('assets/inter-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:Inter;src:url('assets/inter-bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
+    :root{color-scheme:dark;--navy:#0f172a;--slate:#1e293b;--white:#f8fafc;--gray:#b5c0d7;--blue:#38bdf8;--violet:#818cf8;--gradient:linear-gradient(105deg,var(--blue),var(--violet))}
+    *,*::before,*::after{box-sizing:border-box}
+    html{background:var(--navy);scrollbar-gutter:stable}
+    body{margin:0;background:var(--navy);color:var(--white);font-family:Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;isolation:isolate}
+    body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 37% 43% at 18% -9%,#078be94a,transparent 88%),radial-gradient(ellipse 33% 48% at 80% -12%,#503ceb52,transparent 90%);animation:atmosphere 16s ease-in-out infinite alternate}
+    @keyframes atmosphere{from{opacity:.68}to{opacity:1}}
+    button,a{-webkit-tap-highlight-color:transparent}
+    a{color:inherit}
+    button{font:inherit;color:inherit}
+    button:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:7px;border-radius:3px}
+    .page{min-height:100svh;max-width:1680px;margin:auto;padding:clamp(24px,3.3vw,50px) clamp(24px,3.75vw,56px) 30px;display:flex;flex-direction:column}
+    header{display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;z-index:1}
+    .domain{font-size:22px;letter-spacing:-.045em;font-weight:700;text-decoration:none}
+    .launch{font-size:20px;color:#d1daed}
+    main{flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:24px 0 52px}
+    .brand-frame{position:relative;width:min(1040px,100%,103svh);aspect-ratio:1536/632;overflow:hidden;flex-shrink:0;mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent)}
+    .brand-frame img{display:block;width:100%;height:auto;}
+    .brand-window{width:100%;height:100%;overflow:hidden;mask-image:linear-gradient(to bottom,transparent,#000 9%,#000 90%,transparent)}
+    .brand-window img{mask-image:none}
+    h1{margin:12px 0 0;font-size:clamp(38px,min(6.1vw,8.4svh),92px);line-height:1.08;font-weight:700;letter-spacing:-.052em;text-wrap:balance}
+    h1 span{display:block}
+    .gradient{background:var(--gradient);background-clip:text;-webkit-background-clip:text;color:transparent}
+    .intro{margin:32px 0 0;max-width:980px;font-size:clamp(18px,1.9vw,26px);line-height:1.5;letter-spacing:-.025em;color:#eef2ff;text-wrap:balance}
+    .promise{margin:22px 0 0;font-size:clamp(16px,1.55vw,22px);line-height:1.55;color:var(--gray);letter-spacing:-.015em}
+    .story-button{margin-top:36px;padding:8px 0 6px;border:0;border-bottom:1px solid #85abdc;background:transparent;color:#bfd9fa;font-size:clamp(16px,1.4vw,20px);cursor:pointer;transition:color .2s,border-color .2s}
+    .story-button:hover{color:white;border-color:var(--blue)}
+    footer{border-top:1px solid #53617c80;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:26px;font-size:14px;line-height:1.5;color:var(--gray)}
+    footer p{margin:0}
+    dialog{width:min(600px,calc(100% - 40px));max-height:calc(100svh - 48px);border:1px solid #6a85b044;border-radius:24px;background:#142037;color:var(--white);padding:40px;box-shadow:0 30px 100px #0008}
+    dialog::backdrop{background:#050b18b8;backdrop-filter:blur(9px)}
+    .dialog-top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:28px}
+    .dialog-wordmark{font-size:25px;font-weight:700;letter-spacing:-.05em}
+    .close-button{border:1px solid #7486a55c;border-radius:999px;background:transparent;padding:9px 15px;cursor:pointer;font-size:14px;min-height:40px}
+    .close-button:hover{background:#253954}
+    dialog h2{font-size:clamp(27px,4.8vw,35px);font-weight:700;line-height:1.15;letter-spacing:-.04em;margin:0 0 24px;text-wrap:balance}
+    dialog p{font-size:17px;line-height:1.7;color:#c8d2e6;margin:0 0 17px}
+    dialog .last-line{margin:26px 0 0;color:var(--white);font-weight:700}
+    @media(min-width:900px) and (max-height:850px){.page{padding-top:28px;padding-bottom:24px}main{padding:8px 0 30px}.brand-frame{width:min(830px,90%,96svh)}h1{margin-top:4px}.intro{margin-top:22px}.promise{margin-top:14px}.story-button{margin-top:23px}footer{padding-top:20px}}
+    @media(max-width:640px){.page{padding:26px 22px 23px;min-height:100svh}.domain{font-size:20px}.launch{font-size:16px}main{padding:40px 0 50px}.brand-frame{width:calc(100% + 32px);max-width:500px;aspect-ratio:1536/632;margin-left:-16px;margin-right:-16px}h1{font-size:clamp(34px,8.6vw,50px);line-height:1.13;letter-spacing:-.047em;margin-top:28px;max-width:440px}h1 span{display:contents}h1 .gradient::before{content:" ";white-space:pre}.intro{font-size:18px;line-height:1.6;margin-top:26px;max-width:350px}.promise{font-size:16px;max-width:300px;margin-top:22px}.story-button{font-size:16px;margin-top:27px;min-height:44px}footer{padding-top:21px;font-size:12px;align-items:flex-start}footer p:last-child{max-width:175px;text-align:right}dialog{padding:26px;border-radius:20px}.dialog-top{margin-bottom:25px}dialog p{font-size:16px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="badge">soluções inteligentes para desafios complexos</div>
-        <h1>Bira.Net</h1>
-        <p>Processando o futuro.<br>Algo inteligente está sendo construído aqui.</p>
-    </div>
+  <div class="page">
+    <header aria-label="Biranet">
+      <a class="domain" href="#inicio" aria-label="Bira.net — início">bira.net</a>
+      <span class="launch">Em breve</span>
+    </header>
+    <main id="inicio">
+      <div class="brand-frame"><div class="brand-window"><img src="assets/biranet.webp" width="1536" height="1024" alt="biranet — retrato ilustrado de Biramar, sorrindo, com cabelos prateados e óculos" fetchpriority="high" decoding="sync"></div></div>
+      <h1><span>O próximo capítulo</span><span class="gradient">vai surpreender você.</span></h1>
+      <p class="intro">Uma nova forma de transformar perguntas em possibilidades.</p>
+      <p class="promise">Feito de história. Movido pelo futuro.</p>
+      <button class="story-button" type="button" aria-haspopup="dialog" aria-controls="story">Por trás do nome</button>
+    </main>
+    <footer><p>biranet © 2026</p><p>Inteligência com uma história de verdade.</p></footer>
+  </div>
+  <dialog id="story" aria-labelledby="story-title" aria-describedby="story-opening">
+    <div class="dialog-top"><span class="dialog-wordmark gradient">biranet</span><button type="button" class="close-button">Fechar</button></div>
+    <h2 id="story-title">Antes de ser uma plataforma,<br>já era uma referência.</h2>
+    <p id="story-opening">Biramar sempre foi aquela pessoa com uma boa conversa, uma experiência para compartilhar e uma curiosidade que não se esgota.</p>
+    <p>Em 2005, a família criou seu primeiro provedor de internet. O nome era VipNet, mas as pessoas preferiam chamar de Biranet. O apelido pegou — e passou a representar uma conexão em que se podia confiar.</p>
+    <p>Agora, esse nome abre um novo capítulo: uma plataforma de inteligência artificial que homenageia a pessoa e a história por trás dele.</p>
+    <p class="last-line">A história é nossa. O próximo capítulo também é seu.</p>
+  </dialog>
+  <script>
+    (() => {
+      const dialog = document.querySelector('#story');
+      const openButton = document.querySelector('.story-button');
+      const closeButton = document.querySelector('.close-button');
+      openButton.addEventListener('click', () => { dialog.showModal(); document.body.style.overflow = 'hidden'; });
+      closeButton.addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', event => { if(event.target !== dialog) return; const box=dialog.getBoundingClientRect(); if(event.clientX<box.left || event.clientX>box.right || event.clientY<box.top || event.clientY>box.bottom) dialog.close(); });
+      dialog.addEventListener('close', () => { document.body.style.overflow=''; openButton.focus({preventScroll:true}); });
+    })();
+  </script>
 </body>
 </html>
